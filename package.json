@@ -1,0 +1,49 @@
+{
+  "name": "dsh-instant-answer",
+  "version": "0.1.0",
+  "description": "ask_user_question 单选卡片：点选项即提交，不再需要按「提交」。多选题、自定义文本、plan-review、review（已结束）卡片不受影响，照旧提交/只读。",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "ask_user_question",
+    "composer",
+    "one-click"
+  ],
+  "license": "MIT",
+  "author": "Nanaka (Hana-ame)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hana-ame/dsh-instant-answer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hana-ame/dsh-instant-answer/issues"
+  },
+  "homepage": "https://github.com/Hana-ame/dsh-instant-answer#readme",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-user-questions",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

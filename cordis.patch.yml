@@ -1,0 +1,6 @@
+# dsh-instant-answer bundle patch: mounts the client half.
+# Install: add to the profile's dsh.profile.bundles (or insert via cordis.patch.yml),
+# plus a `dependencies` entry pointing at this directory.
+- insert:
+    - id: instant-answer
+      name: 'dsh-instant-answer'
