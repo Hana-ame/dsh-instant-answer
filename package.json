@@ -1,6 +1,6 @@
 {
   "name": "dsh-instant-answer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ask_user_question 单选卡片：点选项即提交，不再需要按「提交」。多选题、自定义文本、plan-review、review（已结束）卡片不受影响，照旧提交/只读。",
   "keywords": [
     "dsh-plugin",
